@@ -3,78 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Dashboard · {{ config('app.name', 'Laravel') }}</title>
-<style>
-:root {
-  --bg:#0f172a; --card:#1e293b; --accent:#00e0ff; --text:#f1f5f9; --radius:14px; --shadow:0 4px 12px rgba(0,0,0,.25);
-}
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-}
-body {
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-header {
-  padding: 1.25rem 2rem;
-  background: #020617;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--shadow);
-}
-header nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: 600;
-  transition: color .3s;
-}
-header nav a:hover {
-  color: var(--accent);
-}
-main {
-  flex: 1;
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 1.5rem;
-}
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 1.75rem 1.5rem;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: transform .3s ease, box-shadow .3s ease;
-  user-select:none;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 18px rgba(0,224,255,.6);
-}
-.card svg {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1rem;
-  fill: var(--accent);
-}
-.card span {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-</style>
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
 <header>
@@ -85,7 +14,7 @@ main {
     <a href="{{ url('/stats') }}">Estadísticas</a>
     <a href="{{ url('/messages') }}">Mensajes</a>
     <a href="{{ url('/calendar') }}">Calendario</a>
-    <a href="{{ url('/logout') }}">Salir</a>
+    <a href="{{ url('https://google.com') }}">Salir</a>
   </nav>
 </header>
 <main>
